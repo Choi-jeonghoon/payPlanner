@@ -1,10 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../pages/HomeScreen";
-import SalaryCalculator from "../pages/SalaryCalculator";
-import { MonthlyCalculator } from "../pages/MonthlyCalculator";
-import { RetirementCalculator } from "../pages/RetirementCalculator";
 import { Colors, Fonts } from "../theme/Theme";
+
+import HomeScreen from "../pages/HomeScreenPage";
+import SalaryCalculator from "../pages/SalaryCalculatorPage";
+import MonthlyCalculator from "../pages/MonthlyCalculatorPage";
+import RetirementCalculator from "../pages/RetirementCalculatorPage";
 
 const Stack = createStackNavigator();
 

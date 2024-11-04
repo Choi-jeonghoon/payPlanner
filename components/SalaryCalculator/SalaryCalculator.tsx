@@ -7,35 +7,28 @@ import {
   StyleSheet,
   Animated,
   ScrollView,
+  LayoutChangeEvent,
 } from "react-native";
-import { Colors, Fonts } from "../theme/Theme";
-import { useSalaryCalculator } from "../hooks/useSalaryCalculator";
-import CustomButton from "../common/CustomButton";
-import useDropdown from "../hooks/useDropdown";
+import { Colors, Fonts } from "../../theme/Theme";
+import CustomButton from "../../common/CustomButton";
+import { SalaryCalculatorProps } from "../../types/SalaryCalculatorTypes";
 
-const SalaryCalculator = () => {
-  //계산 로직 관련
-  const {
-    salary,
-    setSalary,
-    taxRate,
-    setTaxRate,
-    result,
-    monthlyResult,
-    incomeTax,
-    taxRates,
-    calculateTakeHomePay,
-  } = useSalaryCalculator();
-
-  //드롭다운 이벤트 관련
-  const {
-    buttonLayout,
-    dropdownVisible,
-    handleLayout,
-    toggleDropdown,
-    dropdownStyle,
-  } = useDropdown();
-
+const SalaryCalculator = ({
+  salary,
+  setSalary,
+  taxRate,
+  setTaxRate,
+  result,
+  monthlyResult,
+  incomeTax,
+  taxRates,
+  calculateTakeHomePay,
+  buttonLayout,
+  dropdownVisible,
+  handleLayout,
+  toggleDropdown,
+  dropdownStyle,
+}: SalaryCalculatorProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>연봉 계산기</Text>
