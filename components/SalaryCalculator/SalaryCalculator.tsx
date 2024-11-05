@@ -7,7 +7,6 @@ import {
   StyleSheet,
   Animated,
   ScrollView,
-  LayoutChangeEvent,
 } from "react-native";
 import { Colors, Fonts } from "../../theme/Theme";
 import CustomButton from "../../common/CustomButton";
