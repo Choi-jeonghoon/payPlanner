@@ -84,7 +84,7 @@ const SalaryCalculator = ({
         style={styles.calculateButton}
         onPress={calculateTakeHomePay}
       >
-        <Text style={styles.calculateButtonText}>예상 금액 계산</Text>
+        <Text style={styles.calculateButtonText}>예상 금액 계산하기</Text>
       </CustomButton>
 
       {result !== null && (

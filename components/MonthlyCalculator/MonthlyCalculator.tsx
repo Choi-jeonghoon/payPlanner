@@ -34,7 +34,10 @@ const MonthlyCalculator = ({
 }: MonthlyCalculatorProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>월급 계산기</Text>
+      <Text style={styles.title}>
+        {" "}
+        {isShortTerm ? "일급 계산" : "월급 계산"}
+      </Text>
       <TextInput
         style={styles.input}
         placeholder="시급을 입력하세요.(원 단위)"
@@ -76,7 +79,9 @@ const MonthlyCalculator = ({
       )}
 
       <CustomButton style={styles.calculateButton} onPress={handleCalculate}>
-        <Text style={styles.calculateButtonText}>월급 계산</Text>
+        <Text style={styles.calculateButtonText}>
+          {isShortTerm ? "일급 계산시작하기" : "월급 계산하기"}
+        </Text>
       </CustomButton>
 
       {totalSalary !== null && !isShortTerm && (
